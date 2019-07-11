@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="refresh" content="60;url=/admin">
+    <title>Vendas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="registro.js"></script>
+    <script src="instalar.js"></script>
+</head>
+<body>
+    <article>
+        <h1>Página On Line Vendas</h1>
+        <p>Você está na página On Line de Vendas</p>
+        <a href="../index.html">Voltar Home</a>
+        <button onclick="install()"> Android </button>
+        <button onclick="install()"> IOS </button>
+        <button onclick="install()"> Windows </button>
+
+    </article>
+
+<script>
+var s = 60; contar();
+function contar()
+{
+   if (s == 0)
+   {
+      document.getElementById('redirecionamento').innerHTML = 'Redirecionando agora. Bom proveito!';
+      clearTimeout(contagem);
+   }
+   else if (s == 1)
+   {
+      document.getElementById('redirecionamento').innerHTML = 'Redirecionando em ' + s-- + ' segundo.';
+      contagem = setTimeout(contar, 1000);
+   }
+   else
+   {
+      document.getElementById('redirecionamento').innerHTML = 'Redirecionando em ' + s-- + ' segundos.';
+      contagem = setTimeout(contar, 1000);
+   }
+}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
